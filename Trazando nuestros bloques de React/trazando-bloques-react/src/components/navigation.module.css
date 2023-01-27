@@ -1,0 +1,9 @@
+#navigation {
+    min-height: 300px;
+    width: 200px;
+    background-color: rgb(113, 113, 237);
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid black;
+}

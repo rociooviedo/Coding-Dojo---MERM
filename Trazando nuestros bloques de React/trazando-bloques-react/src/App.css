@@ -1,0 +1,7 @@
+.app {
+	width: 1000px;
+	padding: 20px;
+	margin: 20px auto;
+	background-color: #cec5c5;
+  border: 2px solid black;
+}
