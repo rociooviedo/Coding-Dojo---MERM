@@ -1,0 +1,11 @@
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
