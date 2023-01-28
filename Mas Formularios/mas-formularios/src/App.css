@@ -1,0 +1,20 @@
+.App {
+  width: max-content;
+  margin: 20px auto 0;
+}
+
+div{
+  background-color: #f6f6f6;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.errors{
+  margin: 0;
+}
