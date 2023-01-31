@@ -1,3 +1,4 @@
+const { response } = require('express');
 const { Producto } = require('../models/producto.model');
 
 module.exports.index = (request, response) => {
@@ -15,4 +16,18 @@ module.exports.createProducto = (request, response) => {
     })
         .then(producto => response.json(producto))
         .catch(err => response.json(err));
+}
+
+//Get All
+module.exports.getAllProducts = (request, response) => {
+    Producto.find({})
+        .then(producto => response.json(producto))
+        .catch((err) => response.json(err));
+}
+
+//Get one product
+module.exports.getProduct = (request, response) => {
+    Producto.findOne({_id:request.params.id})
+        .then(producto => response.json(producto))
+        .catch((err) => response.json(err));
 }
