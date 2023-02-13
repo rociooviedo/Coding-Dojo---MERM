@@ -10,16 +10,39 @@ const AuthorForm = (props) => {
     const onSubmitHandler = (event) => {
         event.preventDefault();
         onSubmitProp({ name });
-        if (type.toLowerCase() === 'create') clearInputs();
+        setName(initialName);
+        // Navigate() todo agregar redireccion
     }
-
-
-    const clearInputs = () => {
-        setName("");
-        document.getElementById("name").focus();
+    const handleOnChange = (e) => {
+        console.log(e.target.value, "ESTO TRATAMOS DE SETEAR")
+        setName({
+            ...name,
+            [e.target.name] : e.target.value
+        })
     }
-
     return (
+        <div className='mt-3'>
+            <h1>Favorite authors</h1>
+            <NavLink to={'/'} >Home</NavLink>
+            <p className='text-purple mt-3'>
+                {type === 'create' ? 'Add a new author' : 'Edit this author'}
+            </p>
+            <form onSubmit={onSubmitHandler} className='border border-secondary p-3 col-8' >
+            <div>
+                <label htmlFor="name">Author Name : </label>
+                <input type="text"  onChange={handleOnChange} name='name' value={name.name} />
+                {/* <input onChange={(e) => setName({
+            ...name,
+            [e.target.name] : e.target.value
+        })} 
+        type="text" name='name' value={name.name} /> */}
+            </div>
+            <button type='submit'>Submit</button>
+        </form>
+    </div>
+    )
+    /*return (
+        
         <div className='mt-3'>
             <h1>Favorite authors</h1>
             <NavLink to={'/'} >Home</NavLink>
@@ -36,7 +59,7 @@ const AuthorForm = (props) => {
                 </div>
             </form>
         </div>
-    )
+    )*/
 }
 
 export default AuthorForm

@@ -1,12 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { NavLink, useNavigate, useParams } from 'react-router-dom'
-import AuthorForm from '../components/autoresForm';
+import AuthorForm from '../components/autoresForm'
 
 const Update = () => {
     const { id } = useParams();
 
-    const [author, setAuthor] = useState();
+    const [author, setAuthor] = useState("");
     const [loaded, setLoaded] = useState(false);
 
     const [errors, setErrors] = useState({});

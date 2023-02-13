@@ -29,7 +29,7 @@ const Main = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<AuthorList />} />
-                    <Route path='/new' element={<AuthorForm type={"create"} onSubmitProp={create} errors={errors} initialName={""} />} />
+                    <Route path='/new' element={<AuthorForm type={"create"} onSubmitProp={create} errors={errors} initialName={{name:""}} />} />
                     <Route path='/edit/:id' element={<Update />} />
                 </Routes>
             </BrowserRouter>
